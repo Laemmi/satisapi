@@ -1,0 +1,25 @@
+{
+    "name": "laemmi/satisapi",
+    "type": "project",
+    "description": "Simple api to write satis.json form e.g. Gitlab webhook",
+    "keywords": ["api", "satis", "gitlab", "webhook"],
+    "homepage": "https://github.com/laemmi/satisapi",
+    "require": {
+        "php": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Lämmlein",
+            "email": "laemmi@spacerabbit.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Laemmi\\Satisapi\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S 0.0.0.0:8080 -t public/"
+    }
+}
