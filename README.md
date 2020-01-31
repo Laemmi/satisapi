@@ -8,7 +8,7 @@ You can use this simple app to write new repositories inside the satis.json.
 
 via composer
 
-    composer create-project laemmi/satisapi satisapi
+    composer create-project --prefer-dist laemmi/satisapi satisapi
 
 or use repository
 
