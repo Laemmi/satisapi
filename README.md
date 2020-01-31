@@ -14,9 +14,19 @@ or use repository
 
     git clone https://github.com/Laemmi/satisapi.git
 
+Copy config.php.dist
+
+    cp config/config.php.dist config/config.php
+
+Set path to satis.json file and enter Gitlab API Token 
+
+For development you can use
+
+    composer serve
+
 ## Use
 
-Call api e.g. via webhook form gitlab. These headers are required
+Call api e.g. via webhook from gitlab. These headers are required
 
     Content-Type: application/json
     X-Gitlab-Token: MySecretKey

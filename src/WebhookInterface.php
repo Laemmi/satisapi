@@ -29,21 +29,19 @@ declare(strict_types=1);
 
 namespace Laemmi\Satisapi;
 
-use Laemmi\Satisapi\Webhook\Gitlab;
-
-class App
+interface WebhookInterface
 {
     /**
-     * @return WebhookInterface
+     * WebhookInterface constructor.
+     * @param array $config
+     * @param Request $request
+     * @param Response $response
+     * @param FileSatis $file
      */
-    public static function run(): WebhookInterface
-    {
-        $config = require 'config/config.php';
+    public function __construct(array $config, Request $request, Response $response, FileSatis $file);
 
-        return new Gitlab(
-            $config,
-            new Request(),
-            new Response(),
-            new FileSatis($config['satisfile']));
-    }
+    /**
+     * @return mixed
+     */
+    public function dispatch();
 }
